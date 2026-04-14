@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Reservar pista</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header class="cabecera">
+            <p> Aquí va la barra de navegación</p>
+        </header>
+        <section class="Reservar">
+            <div class="cabecera reserva">
+                <h2>Reserva tu pista de padel</h2>
+                <p class="subtitulo">Selecciona la fecha y el horario para tu próximo partido.</p>
+            </div>
+
+            <div class="fecha">
+                <form>
+                    <label for="reserva">Fecha del partido: </label>
+                    <input type="date" id="reserva" name="reserva">
+                </form>
+            </div>
+
+            <input type="radio" name="filtro-pistas" id="filtro-todas" checked class="filtro-oculto">
+            <input type="radio" name="filtro-pistas" id="filtro-interior" class="filtro-oculto">
+            <input type="radio" name="filtro-pistas" id="filtro-techo" class="filtro-oculto">
+            <input type="radio" name="filtro-pistas" id="filtro-sin" class="filtro-oculto">
+
+            <div class="menu-filtros">
+                <label for="filtro-todas" class="btn-filtro">Todas</label>
+                <label for="filtro-interior" class="btn-filtro">Interior</label>
+                <label for="filtro-techo" class="btn-filtro">Exterior con techo</label>
+                <label for="filtro-sin" class="btn-filtro">Exterior sin techo</label>
+            </div>
+
+            <div class="pistas">
+                <article class="card tipo-interior">
+                    <div class="info-pist">
+                        <h3>Pista 01</h3>
+                        <span class="tipo-pist">Cristal Panorámica WPT</span>
+                        <span class="precio-pist">10€</span>
+                    </div>
+                    <div class="imagen-pist">
+                        <button type="button" class="pasar-derecha flecha">></button>
+                        <button type="button" class="pasar-izquierda flecha"><</button>
+
+                        <img src="src/pista-interior.png" alt="pista interior" class="foto-principal">
+                        <img src="src/padel-interior-3d.jpg" alt="pista 3D" class="foto-secundaria">
+                    </div>
+                    <div class="horarios">
+                        <button class="hora-disponible">9:00</button>
+                        <button class="hora-disponible">10:30</button>
+                        <button class="hora-ocupada" disabled>12:00</button>
+                        <button class="hora-disponible">13:30</button>
+                        <button class="hora-ocupada" disabled>15:00</button>
+                        <button class="hora-disponible">16:30</button>
+                        <button class="hora-disponible">18:00</button>
+                        <button class="hora-disponible">19:30</button>
+                        <button class="hora-ocupada" disabled>21:00</button>
+                    </div>
+                </article>
+
+                <article class="card tipo-techo">
+                    <div class="info-pist">
+                        <h3>Pista 02</h3>
+                        <span class="tipo-pist">Cristal Indoor Premium</span>
+                    <span class="precio-pist">10€</span>
+                    </div>
+                    <div class="imagen-pist">
+                        <button type="button" class="pasar-derecha flecha">></button>
+                        <button type="button" class="pasar-izquierda flecha"><</button>
+
+                        <img src="src/pista-interior.png" alt="pista interior" class="foto-principal">
+                        <img src="src/padel-interior-3d.jpg" alt="pista 3D" class="foto-secundaria">
+                    </div>
+                    <div class="horarios">
+                        <button class="hora-ocupada" disabled>9:00</button>
+                        <button class="hora-disponible">10:30</button>
+                        <button class="hora-disponible">12:00</button>
+                        <button class="hora-disponible">13:30</button>
+                        <button class="hora-ocupada" disabled>15:00</button>
+                        <button class="hora-ocupada" disabled>16:30</button>
+                        <button class="hora-disponible">18:00</button>
+                        <button class="hora-ocupada" disabled>19:30</button>
+                        <button class="hora-ocupada" disabled>21:00</button>
+                    </div>
+                </article>
+
+                <article class="card tipo-sin">
+                    <div class="info-pist">
+                        <h3>Pista 03</h3>
+                        <span class="tipo-pist">Cristal Indoor Premium</span>
+                    <span class="precio-pist">10€</span>
+                    </div>
+                    <div class="imagen-pist">
+                        <button type="button" class="pasar-derecha flecha">></button>
+                        <button type="button" class="pasar-izquierda flecha"><</button>
+
+                        <img src="src/padel-exterior-sin.jpg" alt="pista interior" class="foto-principal">
+                        <img src="src/sin-3D.jpg" alt="pista 3D" class="foto-secundaria">
+                    </div>
+                    <div class="horarios">
+                        <button class="hora-disponible">9:00</button>
+                        <button class="hora-disponible">10:30</button>
+                        <button class="hora-ocupada" disabled>12:00</button>
+                        <button class="hora-ocupada" disabled>13:30</button>
+                        <button class="hora-ocupada" disabled>15:00</button>
+                        <button class="hora-ocupada" disabled>16:30</button>
+                        <button class="hora-ocupada" disabled>18:00</button>
+                        <button class="hora-disponible">19:30</button>
+                        <button class="hora-disponible">21:00</button>
+                    </div>
+                </article>
+
+                <article class="card tipo-sin">
+                    <div class="info-pist">
+                        <h3>Pista 04</h3>
+                        <span class="tipo-pist">Cristal Outdoor Premium</span>
+                        <span class="precio-pist">10€</span>
+                    </div>
+                    <div class="imagen-pist">
+                        <button type="button" class="pasar-derecha flecha">></button>
+                        <button type="button" class="pasar-izquierda flecha"><</button>
+
+                        <img src="src/pista-interior.png" alt="pista interior" class="foto-principal">
+                        <img src="src/padel-interior-3d.jpg" alt="pista 3D" class="foto-secundaria">
+                    </div>
+                    <div class="horarios">
+                        <button class="hora-ocupada" disabled>9:00</button>
+                        <button class="hora-disponible">10:30</button>
+                        <button class="hora-ocupada" disabled>12:00</button>
+                        <button class="hora-disponible">13:30</button>
+                        <button class="hora-disponible">15:00</button>
+                        <button class="hora-ocupada" disabled>16:30</button>
+                        <button class="hora-disponible">18:00</button>
+                        <button class="hora-ocupada" disabled>19:30</button>
+                        <button class="hora-disponible">21:00</button>
+                    </div>
+                </article>
+
+                <article class="card tipo-interior">
+                    <div class="info-pist">
+                        <h3>Pista 05</h3>
+                        <span class="tipo-pist">Cristal Indoor Premium</span>
+                    <span class="precio-pist">10€</span>
+                    </div>
+                    <div class="imagen-pist">
+                        <button type="button" class="pasar-derecha flecha">></button>
+                        <button type="button" class="pasar-izquierda flecha"><</button>
+
+                        <img src="src/pista-interior.png" alt="pista interior" class="foto-principal">
+                        <img src="src/padel-interior-3d.jpg" alt="pista 3D" class="foto-secundaria">
+                    </div>
+                    <div class="horarios">
+                        <button class="hora-ocupada" disabled>9:00</button>
+                        <button class="hora-disponible">10:30</button>
+                        <button class="hora-ocupada" disabled>12:00</button>
+                        <button class="hora-disponible">13:30</button>
+                        <button class="hora-ocupada" disabled>15:00</button>
+                        <button class="hora-disponible">16:30</button>
+                        <button class="hora-ocupada" disabled>18:00</button>
+                        <button class="hora-ocupada" disabled>19:30</button>
+                        <button class="hora-ocupada" disabled>21:00</button>
+                    </div>
+                </article>
+
+                <article class="card tipo-interior">
+                    <div class="info-pist">
+                        <h3>Pista 06</h3>
+                        <span class="tipo-pist">Cristal Indoor Premium</span>
+                    <span class="precio-pist">10€</span>
+                    </div>
+                    <div class="imagen-pist">
+                        <button type="button" class="pasar-derecha flecha">></button>
+                        <button type="button" class="pasar-izquierda flecha"><</button>
+
+                        <img src="src/pista-interior.png" alt="pista interior" class="foto-principal">
+                        <img src="src/padel-interior-3d.jpg" alt="pista 3D" class="foto-secundaria">
+                    </div>
+                    <div class="horarios">
+                        <button class="hora-ocupada" disabled>9:00</button>
+                        <button class="hora-disponible">10:30</button>
+                        <button class="hora-ocupada" disabled>12:00</button>
+                        <button class="hora-disponible">13:30</button>
+                        <button class="hora-ocupada" disabled>15:00</button>
+                        <button class="hora-ocupada" disabled>16:30</button>
+                        <button class="hora-disponible">18:00</button>
+                        <button class="hora-disponible">19:30</button>
+                        <button class="hora-disponible">21:00</button>
+                    </div>
+                </article>
+
+                <article class="card tipo-techo">
+                    <div class="info-pist">
+                        <h3>Pista 07</h3>
+                        <span class="tipo-pist">Cristal Indoor Premium</span>
+                    <span class="precio-pist">10€</span>
+                    </div>
+                    <div class="imagen-pist">
+                        <button type="button" class="pasar-derecha flecha">></button>
+                        <button type="button" class="pasar-izquierda flecha"><</button>
+
+                        <img src="src/pista-interior.png" alt="pista interior" class="foto-principal">
+                        <img src="src/padel-interior-3d.jpg" alt="pista 3D" class="foto-secundaria">
+                    </div>
+                    <div class="horarios">
+                        <button class="hora-ocupada" disabled>9:00</button>
+                        <button class="hora-ocupada" disabled>10:30</button>
+                        <button class="hora-disponible">12:00</button>
+                        <button class="hora-disponible">13:30</button>
+                        <button class="hora-ocupada" disabled>15:00</button>
+                        <button class="hora-disponible">16:30</button>
+                        <button class="hora-disponible">18:00</button>
+                        <button class="hora-disponible">19:30</button>
+                        <button class="hora-ocupada" disabled>21:00</button>
+                    </div>
+                </article>
+
+                <article class="card tipo-sin">
+                    <div class="info-pist">
+                        <h3>Pista 08</h3>
+                        <span class="tipo-pist">Cristal Indoor Premium</span>
+                    <span class="precio-pist">10€</span>
+                    </div>
+                    <div class="imagen-pist">
+                        <button type="button" class="pasar-derecha flecha">></button>
+                        <button type="button" class="pasar-izquierda flecha"><</button>
+
+                        <img src="src/pista-interior.png" alt="pista interior" class="foto-principal">
+                        <img src="src/padel-interior-3d.jpg" alt="pista 3D" class="foto-secundaria">
+                    </div>
+                    <div class="horarios">
+                        <button class="hora-disponible">9:00</button>
+                        <button class="hora-disponible">10:30</button>
+                        <button class="hora-disponible">12:00</button>
+                        <button class="hora-disponible">13:30</button>
+                        <button class="hora-disponible">15:00</button>
+                        <button class="hora-ocupada" disabled>16:30</button>
+                        <button class="hora-disponible">18:00</button>
+                        <button class="hora-ocupada" disabled>19:30</button>
+                        <button class="hora-ocupada" disabled>21:00</button>
+                    </div>
+                </article>
+
+                <article class="card tipo-techo">
+                    <div class="info-pist">
+                        <h3>Pista 09</h3>
+                        <span class="tipo-pist">Cristal Indoor Premium</span>
+                    <span class="precio-pist">10€</span>
+                    </div>
+                    <div class="imagen-pist">
+                        <button type="button" class="pasar-derecha flecha">></button>
+                        <button type="button" class="pasar-izquierda flecha"><</button>
+
+                        <img src="src/pista-interior.png" alt="pista interior" class="foto-principal">
+                        <img src="src/padel-interior-3d.jpg" alt="pista 3D" class="foto-secundaria">
+                    </div>
+                    <div class="horarios">
+                        <button class="hora-ocupada" disabled>9:00</button>
+                        <button class="hora-ocupada" disabled>10:30</button>
+                        <button class="hora-ocupada" disabled>12:00</button>
+                        <button class="hora-disponible">13:30</button>
+                        <button class="hora-ocupada" disabled>15:00</button>
+                        <button class="hora-disponible">16:30</button>
+                        <button class="hora-disponible">18:00</button>
+                        <button class="hora-ocupada" disabled>19:30</button>
+                        <button class="hora-ocupada" disabled>21:00</button>
+                    </div>
+                </article>
+
+                <article class="card tipo-techo">
+                    <div class="info-pist">
+                        <h3>Pista 10</h3>
+                        <span class="tipo-pist">Cristal Indoor Premium</span>
+                    <span class="precio-pist">10€</span>
+                    </div>
+                    <div class="imagen-pist">
+                        <button type="button" class="pasar-derecha flecha">></button>
+                        <button type="button" class="pasar-izquierda flecha"><</button>
+
+                        <img src="src/pista-interior.png" alt="pista interior" class="foto-principal">
+                        <img src="src/padel-interior-3d.jpg" alt="pista 3D" class="foto-secundaria">
+                    </div>
+                    <div class="horarios">
+                        <button class="hora-ocupada" disabled>9:00</button>
+                        <button class="hora-disponible">10:30</button>
+                        <button class="hora-disponible">12:00</button>
+                        <button class="hora-disponible">13:30</button>
+                        <button class="hora-ocupada" disabled>15:00</button>
+                        <button class="hora-ocupada" disabled>16:30</button>
+                        <button class="hora-disponible">18:00</button>
+                        <button class="hora-disponible">19:30</button>
+                        <button class="hora-disponible">21:00</button>
+                    </div>
+                </article>
+
+                <article class="card tipo-interior">
+                    <div class="info-pist">
+                        <h3>Pista 11</h3>
+                        <span class="tipo-pist">Cristal Indoor Premium</span>
+                    <span class="precio-pist">10€</span>
+                    </div>
+                    <div class="imagen-pist">
+                        <button type="button" class="pasar-derecha flecha">></button>
+                        <button type="button" class="pasar-izquierda flecha"><</button>
+
+                        <img src="src/pista-interior.png" alt="pista interior" class="foto-principal">
+                        <img src="src/padel-interior-3d.jpg" alt="pista 3D" class="foto-secundaria">
+                    </div>
+                    <div class="horarios">
+                        <button class="hora-disponible">9:00</button>
+                        <button class="hora-disponible">10:30</button>
+                        <button class="hora-disponible">12:00</button>
+                        <button class="hora-disponible">13:30</button>
+                        <button class="hora-ocupada" disabled>15:00</button>
+                        <button class="hora-ocupada" disabled>16:30</button>
+                        <button class="hora-ocupada" disabled>18:00</button>
+                        <button class="hora-ocupada" disabled>19:30</button>
+                        <button class="hora-ocupada" disabled>21:00</button>
+                    </div>
+                </article>
+
+
+                <article class="card tipo-sin">
+                    <div class="info-pist">
+                        <h3>Pista 12</h3>
+                        <span class="tipo-pist">Cristal Indoor Premium</span>
+                    <span class="precio-pist">10€</span>
+                    </div>
+                    <div class="imagen-pist">
+                        <button type="button" class="pasar-derecha flecha">></button>
+                        <button type="button" class="pasar-izquierda flecha"><</button>
+
+                        <img src="src/pista-interior.png" alt="pista interior" class="foto-principal">
+                        <img src="src/padel-interior-3d.jpg" alt="pista 3D" class="foto-secundaria">
+                    </div>
+                    <div class="horarios">
+                        <button class="hora-ocupada" disabled>9:00</button>
+                        <button class="hora-ocupada" disabled>10:30</button>
+                        <button class="hora-ocupada" disabled>12:00</button>
+                        <button class="hora-disponible">13:30</button>
+                        <button class="hora-ocupada" disabled>15:00</button>
+                        <button class="hora-ocupada" disabled>16:30</button>
+                        <button class="hora-ocupada" disabled>18:00</button>
+                        <button class="hora-ocupada" disabled>19:30</button>
+                        <button class="hora-ocupada" disabled>21:00</button>
+                    </div>
+                </article>
+
+                <article class="card tipo-sin">
+                    <div class="info-pist">
+                        <h3>Pista 13</h3>
+                        <span class="tipo-pist">Cristal Indoor Premium</span>
+                    <span class="precio-pist">10€</span>
+                    </div>
+                    <div class="imagen-pist">
+                        <button type="button" class="pasar-derecha flecha">></button>
+                        <button type="button" class="pasar-izquierda flecha"><</button>
+
+                        <img src="src/pista-interior.png" alt="pista interior" class="foto-principal">
+                        <img src="src/padel-interior-3d.jpg" alt="pista 3D" class="foto-secundaria">
+                    </div>
+                    <div class="horarios">
+                        <button class="hora-ocupada" disabled>9:00</button>
+                        <button class="hora-disponible">10:30</button>
+                        <button class="hora-disponible">12:00</button>
+                        <button class="hora-disponible">13:30</button>
+                        <button class="hora-ocupada" disabled>15:00</button>
+                        <button class="hora-ocupada" disabled>16:30</button>
+                        <button class="hora-disponible">18:00</button>
+                        <button class="hora-ocupada" disabled>19:30</button>
+                        <button class="hora-ocupada" disabled>21:00</button>
+                    </div>
+                </article>
+
+                <article class="card tipo-interior">
+                    <div class="info-pist">
+                        <h3>Pista 14</h3>
+                        <span class="tipo-pist">Cristal Indoor Premium</span>
+                    <span class="precio-pist">10€</span>
+                    </div>
+                    <div class="imagen-pist">
+                        <button type="button" class="pasar-derecha flecha">></button>
+                        <button type="button" class="pasar-izquierda flecha"><</button>
+
+                        <img src="src/pista-interior.png" alt="pista interior" class="foto-principal">
+                        <img src="src/padel-interior-3d.jpg" alt="pista 3D" class="foto-secundaria">
+                    </div>
+                    <div class="horarios">
+                        <button class="hora-ocupada" disabled>9:00</button>
+                        <button class="hora-disponible">10:30</button>
+                        <button class="hora-disponible">12:00</button>
+                        <button class="hora-disponible">13:30</button>
+                        <button class="hora-ocupada" disabled>15:00</button>
+                        <button class="hora-ocupada" disabled>16:30</button>
+                        <button class="hora-disponible">18:00</button>
+                        <button class="hora-ocupada" disabled>19:30</button>
+                        <button class="hora-ocupada" disabled>21:00</button>
+                    </div>
+                </article>
+
+                <article class="card tipo-techo">
+                    <div class="info-pist">
+                        <h3>Pista 15</h3>
+                        <span class="tipo-pist">Cristal Indoor Premium</span>
+                    <span class="precio-pist">10€</span>
+                    </div>
+                    <div class="imagen-pist">
+                        <button type="button" class="pasar-derecha flecha">></button>
+                        <button type="button" class="pasar-izquierda flecha"><</button>
+
+                        <img src="src/pista-interior.png" alt="pista interior" class="foto-principal">
+                        <img src="src/padel-interior-3d.jpg" alt="pista 3D" class="foto-secundaria">
+                    </div>
+                    <div class="horarios">
+                        <button class="hora-ocupada" disabled>9:00</button>
+                        <button class="hora-disponible">10:30</button>
+                        <button class="hora-disponible">12:00</button>
+                        <button class="hora-disponible">13:30</button>
+                        <button class="hora-ocupada" disabled>15:00</button>
+                        <button class="hora-ocupada" disabled>16:30</button>
+                        <button class="hora-disponible">18:00</button>
+                        <button class="hora-ocupada" disabled>19:30</button>
+                        <button class="hora-ocupada" disabled>21:00</button>
+                    </div>
+                </article>
+            </div>
+            
+        </section>
+
+
+    </body>
+    <footer>
+        <p>@ 2026 Premium Padel Club</p>
+    </footer>
+</html>
