@@ -1,0 +1,196 @@
+.mapa{
+    width: 100%;
+    height:600px;
+    margin-bottom: 30px;
+}
+
+.mapa img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding-bottom: 30px;
+}
+
+.mapa h2{
+    color: #166534;
+    text-align: center;
+}
+
+
+.filtro-oculto{
+    display: none;
+}
+
+.menu-filtros{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 60px 10px;
+    flex-wrap: wrap;
+}
+
+.btn-filtro{
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #556;
+    transition: all 0.3s ease;
+}
+
+.btn-filtro:hover{
+    border-color: #166534;
+    color:#166534;
+}
+
+#filtro-todas:checked ~ .menu-filtros label[for="filtro-todas"],
+#filtro-interior:checked ~ .menu-filtros label[for="filtro-interior"],
+#filtro-techo:checked ~ .menu-filtros label[for="filtro-techo"],
+#filtro-sin:checked ~ .menu-filtros label[for="filtro-sin"]{
+    background-color: #166534;
+    color: white;
+    border-color: #166534;
+}
+
+#filtro-interior:checked ~ .pistas .card:not(.tipo-interior){
+    display: none;
+}
+
+#filtro-techo:checked ~ .pistas .card:not(.tipo-techo){
+    display: none;
+}
+
+#filtro-sin:checked ~ .pistas .card:not(.tipo-sin){
+    display: none;
+}
+
+.pistas{
+    width: 90%;
+    max-width: 1240px;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    position: relative;
+    column-gap: 20px;
+}
+
+@media only screen and (min-width: 900px){
+    .pistas{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (min-width: 1500px){
+    .pistas{
+        grid-template-columns:repeat(3, 1fr);
+    }
+}
+
+.info-pist{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    border: 1px solid #eee;
+    padding: 10px 10px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.imagen-pist{
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    margin: 0;
+}
+
+.foto-principal, .foto-secundaria{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: opacity 0.3s ease;
+}
+
+.foto-secundaria{
+    opacity: 0;
+}
+
+.flecha{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: #ddd4;
+    width: 35px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+}
+
+.flecha:hover{
+    background-color: white;
+}
+
+.pasar-derecha{
+    right: 10px;
+}
+
+.pasar-izquierda{
+    left: 10px;
+}
+
+.pasar-derecha:focus ~ .foto-secundaria{
+    opacity: 1;
+}
+
+.pasar-derecha:focus ~ .foto-principal{
+    opacity: 0;
+}
+
+.flecha:focus{
+    outline: none;
+}
+.horarios{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 15px 15px;
+    position: relative;
+}
+
+.hora-disponible{
+    background-color: #ada;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #fff;
+    padding: 10px;
+}
+
+.hora-ocupada{
+    background-color: #daa;
+    border: none;
+    border-radius: 2px;
+    color: #ddd;
+    padding: 10px;
+}
+
+.hora-disponible:hover{
+    border: 1px solid #166534;
+    color: #166534;
+}
+
