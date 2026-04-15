@@ -681,6 +681,7 @@ td:first-child {
 
 .btn-borrar:hover {
     background-color: #cc0000;
+}
 .admin-toolbar{
     flex-wrap: wrap;
 }
