@@ -414,7 +414,7 @@ body {
     border: 1px solid #fca5a5;
     color: #ddd;
     padding: 10px;
-    cursor: none;
+    cursor: not-allowed;
 }
 
 .intro{
@@ -599,4 +599,191 @@ td:first-child {
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
+}
+
+.admin-toolbar{
+    flex-wrap: wrap;
+}
+
+.admin-menu-filtros{
+    justify-content: flex-start;
+    margin: 0;
+}
+
+.btn-admin-principal{
+    background-color: #166534;
+    color: white;
+    border-color: #166534;
+}
+
+.btn-admin-principal:hover{
+    background-color: white;
+    color: #166534;
+}
+
+.acciones-tabla{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    white-space: nowrap;
+}
+
+.accion-tabla{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-block;
+}
+
+.accion-tabla:hover{
+    text-decoration: underline;
+}
+
+.accion-tabla.editar{
+    color: #166534;
+}
+
+.estado-inactiva{
+    background-color: #f3f4f6;
+    color: #6b7280;
+}
+
+#admin-todas:checked ~ .admin-bloque .admin-menu-filtros label[for="admin-todas"],
+#admin-activas:checked ~ .admin-bloque .admin-menu-filtros label[for="admin-activas"],
+#admin-inactivas:checked ~ .admin-bloque .admin-menu-filtros label[for="admin-inactivas"]{
+    background-color: #166534;
+    color: white;
+    border-color: #166534;
+}
+
+#admin-activas:checked ~ .admin-bloque .tabla-pistas-admin .fila-pista-admin.inactiva{
+    display: none;
+}
+
+#admin-inactivas:checked ~ .admin-bloque .tabla-pistas-admin .fila-pista-admin.activa{
+    display: none;
+}
+
+.admin-formulario-bloque{
+    max-width: 760px;
+    margin: 0 auto 40px auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.admin-formulario-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.admin-formulario-header h3{
+    margin: 0;
+    color: #166534;
+}
+
+.admin-formulario-pista{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+}
+
+@media only screen and (min-width: 800px){
+    .admin-formulario-pista{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .admin-formulario-acciones{
+        grid-column: 1 / -1;
+    }
+}
+
+.select-admin{
+    padding: 0.65rem 0.9rem;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 1rem;
+    color: #333;
+    background-color: white;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.select-admin:focus{
+    border-color: #166534;
+}
+
+.admin-formulario-acciones{
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.btn-guardar-pista{
+    width: auto;
+    min-width: 180px;
+    margin-top: 0;
+}
+
+.cancelar-izquierda{
+    margin-right: auto;
+}
+
+input[readonly]{
+    background-color: #f3f4f6;
+    color: #6b7280;
+    cursor: not-allowed;
+}
+
+.rol-admin-badge{
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.rol-user-badge{
+    background-color: #e5e7eb;
+    color: #4b5563;
+}
+
+.rol-admin-badge-verde{
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+#usuarios-todos:checked ~ .admin-bloque .admin-menu-filtros label[for="usuarios-todos"],
+#usuarios-activos:checked ~ .admin-bloque .admin-menu-filtros label[for="usuarios-activos"],
+#usuarios-inactivos:checked ~ .admin-bloque .admin-menu-filtros label[for="usuarios-inactivos"],
+#usuarios-admins:checked ~ .admin-bloque .admin-menu-filtros label[for="usuarios-admins"],
+#usuarios-users:checked ~ .admin-bloque .admin-menu-filtros label[for="usuarios-users"]{
+    background-color: #166534;
+    color: white;
+    border-color: #166534;
+}
+
+#usuarios-activos:checked ~ .admin-bloque .tabla-usuarios-admin .fila-usuario-admin.inactivo{
+    display: none;
+}
+
+#usuarios-inactivos:checked ~ .admin-bloque .tabla-usuarios-admin .fila-usuario-admin.activo{
+    display: none;
+}
+
+#usuarios-admins:checked ~ .admin-bloque .tabla-usuarios-admin .fila-usuario-admin:not(.rol-admin){
+    display: none;
+}
+
+#usuarios-users:checked ~ .admin-bloque .tabla-usuarios-admin .fila-usuario-admin:not(.rol-user){
+    display: none;
 }
