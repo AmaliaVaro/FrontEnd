@@ -389,7 +389,7 @@ body {
     border: 1px solid #fca5a5;
     color: #ddd;
     padding: 10px;
-    cursor: none;
+    cursor: not-allowed;
 }
 
 .intro{
