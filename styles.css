@@ -841,3 +841,29 @@ input[readonly]{
 #reservas-hoy:checked ~ .admin-bloque .tabla-reservas-admin .fila-reserva-admin:not(.hoy){
     display: none;
 }
+
+.admin-formulario-reserva{
+    grid-template-columns: 1fr;
+}
+
+@media only screen and (min-width: 800px){
+    .admin-formulario-reserva{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.admin-formulario-acciones-reserva{
+    align-items: center;
+}
+
+.btn-admin-peligro{
+    background-color: #fee2e2;
+    color: #b91c1c;
+    border-color: #fecaca;
+}
+
+.btn-admin-peligro:hover{
+    background-color: #b91c1c;
+    color: white;
+    border-color: #b91c1c;
+}
