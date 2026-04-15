@@ -320,6 +320,24 @@ body {
   text-decoration: underline;
 }
 
+.footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  color: #888;
+  font-size: 0.8rem;
+}
+
+.footer-link {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #166534;
+  text-decoration: underline;
+}
+
 /*SignIn*/
 .Signin-container {
   max-width: 420px;
