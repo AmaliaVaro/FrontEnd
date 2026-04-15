@@ -4,18 +4,32 @@
         <meta charset="UTF-8">
         <title>Reservar pista</title>
         <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/png" href="src/Captura de pantalla 2026-04-15 171537.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <header class="cabecera">
-            <p> Aquí va la barra de navegación</p>
+            <div class="nav-grupo">
+                <span class="logo">&#127934 Premium Padel</span>
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="misReservas.html" class="nav-link">Mis reservas</a>
+            </div>
+            <div class="nav-grupo">
+                <a href="admin.html" class="nav-link">Portal Admin</a>
+                <a href="logIn.html" class="nav-link">Login</a>
+                <a href="SignIn.html" class="nav-link"> Sign In</a>
+                <a href="notificaciones.html" class="nav-link icono">&#128276</a>
+                <a href="perfil.html" class="nav-link icono">&#128100</a>
+            </div>
         </header>
-        <section class="Reservar">
-            <div class="cabecera reserva">
+        <div class="espacio"></div>
+        <main class="contenedor-principal">
+            <div class="intro">
                 <h2>Reserva tu pista de padel</h2>
                 <p class="subtitulo">Selecciona la fecha y el horario para tu próximo partido.</p>
             </div>
 
-            <div class="fecha">
+            <div class="fecha-reserva">
                 <form>
                     <label for="reserva">Fecha del partido: </label>
                     <input type="date" id="reserva" name="reserva">
@@ -43,15 +57,15 @@
                 <article class="card tipo-interior">
                     <div class="info-pist">
                         <h3>Pista 01</h3>
-                        <span class="tipo-pist">Cristal Panorámica WPT</span>
-                        <span class="precio-pist">10€</span>
+                        <span class="tipo-pist">Cristal Indoor Luxury</span>
+                        <span class="precio-pist">35€</span>
                     </div>
                     <div class="imagen-pist">
                         <button type="button" class="pasar-derecha flecha">></button>
                         <button type="button" class="pasar-izquierda flecha"><</button>
 
                         <img src="src/Imagen7.jpeg" alt="pista interior" class="foto-principal">
-                        <img src="src/Imagen2.jpeg" alt="pista 3D" class="foto-secundaria">
+                        <img src="src/Imagen3.jpeg" alt="pista 3D" class="foto-secundaria">
                     </div>
                     <div class="horarios">
                         <button class="hora-disponible">9:00</button>
@@ -69,14 +83,14 @@
                 <article class="card tipo-techo">
                     <div class="info-pist">
                         <h3>Pista 02</h3>
-                        <span class="tipo-pist">Cristal Indoor Premium</span>
-                    <span class="precio-pist">10€</span>
+                        <span class="tipo-pist">Cristal Outdoor Premium</span>
+                    <span class="precio-pist">25€</span>
                     </div>
                     <div class="imagen-pist">
                         <button type="button" class="pasar-derecha flecha">></button>
                         <button type="button" class="pasar-izquierda flecha"><</button>
 
-                        <img src="src/Imagen11.jpeg" alt="pista interior" class="foto-principal">
+                        <img src="src/Imagen9.jpeg" alt="pista interior" class="foto-principal">
                         <img src="src/Imagen10.jpeg" alt="pista 3D" class="foto-secundaria">
                     </div>
                     <div class="horarios">
@@ -95,14 +109,14 @@
                 <article class="card tipo-sin">
                     <div class="info-pist">
                         <h3>Pista 03</h3>
-                        <span class="tipo-pist">Cristal Indoor Premium</span>
-                    <span class="precio-pist">10€</span>
+                        <span class="tipo-pist">Cristal Sun Premium</span>
+                    <span class="precio-pist">15€</span>
                     </div>
                     <div class="imagen-pist">
                         <button type="button" class="pasar-derecha flecha">></button>
                         <button type="button" class="pasar-izquierda flecha"><</button>
 
-                        <img src="src/Imagen3.jpeg" alt="pista interior" class="foto-principal">
+                        <img src="src/Imagen5.jpeg" alt="pista interior" class="foto-principal">
                         <img src="src/Imagen4.jpeg" alt="pista 3D" class="foto-secundaria">
                     </div>
                     <div class="horarios">
@@ -121,15 +135,15 @@
                 <article class="card tipo-sin">
                     <div class="info-pist">
                         <h3>Pista 04</h3>
-                        <span class="tipo-pist">Cristal Outdoor Premium</span>
-                        <span class="precio-pist">10€</span>
+                        <span class="tipo-pist">Cristal Sun Premium</span>
+                        <span class="precio-pist">15€</span>
                     </div>
                     <div class="imagen-pist">
                         <button type="button" class="pasar-derecha flecha">></button>
                         <button type="button" class="pasar-izquierda flecha"><</button>
 
                         <img src="src/Imagen5.jpeg" alt="pista interior" class="foto-principal">
-                        <img src="src/Imagen6.jpeg" alt="pista 3D" class="foto-secundaria">
+                        <img src="src/Imagen4.jpeg" alt="pista 3D" class="foto-secundaria">
                     </div>
                     <div class="horarios">
                         <button class="hora-ocupada" disabled>9:00</button>
@@ -148,14 +162,14 @@
                     <div class="info-pist">
                         <h3>Pista 05</h3>
                         <span class="tipo-pist">Cristal Indoor Premium</span>
-                    <span class="precio-pist">10€</span>
+                    <span class="precio-pist">20€</span>
                     </div>
                     <div class="imagen-pist">
                         <button type="button" class="pasar-derecha flecha">></button>
                         <button type="button" class="pasar-izquierda flecha"><</button>
 
-                        <img src="src/Imagen1.png" alt="pista interior" class="foto-principal">
-                        <img src="src/Imagen2.jpeg" alt="pista 3D" class="foto-secundaria">
+                        <img src="src/Imagen6.jpeg" alt="pista interior" class="foto-principal">
+                        <img src="src/Imagen3.jpeg" alt="pista 3D" class="foto-secundaria">
                     </div>
                     <div class="horarios">
                         <button class="hora-ocupada" disabled>9:00</button>
@@ -173,14 +187,14 @@
                 <article class="card tipo-interior">
                     <div class="info-pist">
                         <h3>Pista 06</h3>
-                        <span class="tipo-pist">Cristal Indoor Premium</span>
+                        <span class="tipo-pist">Cristal Indoor</span>
                     <span class="precio-pist">10€</span>
                     </div>
                     <div class="imagen-pist">
                         <button type="button" class="pasar-derecha flecha">></button>
                         <button type="button" class="pasar-izquierda flecha"><</button>
 
-                        <img src="src/Imagen1.png" alt="pista interior" class="foto-principal">
+                        <img src="src/Imagen3.jpeg" alt="pista interior" class="foto-principal">
                         <img src="src/Imagen2.jpeg" alt="pista 3D" class="foto-secundaria">
                     </div>
                     <div class="horarios">
@@ -199,15 +213,15 @@
                 <article class="card tipo-techo">
                     <div class="info-pist">
                         <h3>Pista 07</h3>
-                        <span class="tipo-pist">Cristal Indoor Premium</span>
-                    <span class="precio-pist">10€</span>
+                        <span class="tipo-pist">Cristal Outdoor Luxury</span>
+                    <span class="precio-pist">40€</span>
                     </div>
                     <div class="imagen-pist">
                         <button type="button" class="pasar-derecha flecha">></button>
                         <button type="button" class="pasar-izquierda flecha"><</button>
 
-                        <img src="src/Imagen11.jpeg" alt="pista interior" class="foto-principal">
-                        <img src="src/Imagen10.jpeg" alt="pista 3D" class="foto-secundaria">
+                        <img src="src/Imagen8.jpeg" alt="pista interior" class="foto-principal">
+                        <img src="src/Imagen9.jpeg" alt="pista 3D" class="foto-secundaria">
                     </div>
                     <div class="horarios">
                         <button class="hora-ocupada" disabled>9:00</button>
@@ -225,15 +239,15 @@
                 <article class="card tipo-sin">
                     <div class="info-pist">
                         <h3>Pista 08</h3>
-                        <span class="tipo-pist">Cristal Indoor Premium</span>
-                    <span class="precio-pist">10€</span>
+                        <span class="tipo-pist">Cristal Sun Luxury</span>
+                    <span class="precio-pist">25€</span>
                     </div>
                     <div class="imagen-pist">
                         <button type="button" class="pasar-derecha flecha">></button>
                         <button type="button" class="pasar-izquierda flecha"><</button>
 
-                        <img src="src/pista-interior.png" alt="pista interior" class="foto-principal">
-                        <img src="src/padel-interior-3d.jpg" alt="pista 3D" class="foto-secundaria">
+                        <img src="src/Imagen1.png" alt="pista interior" class="foto-principal">
+                        <img src="src/Imagen4.jpeg" alt="pista 3D" class="foto-secundaria">
                     </div>
                     <div class="horarios">
                         <button class="hora-disponible">9:00</button>
@@ -251,8 +265,8 @@
                 <article class="card tipo-techo">
                     <div class="info-pist">
                         <h3>Pista 09</h3>
-                        <span class="tipo-pist">Cristal Indoor Premium</span>
-                    <span class="precio-pist">10€</span>
+                        <span class="tipo-pist">Cristal Outdoor Luxury</span>
+                    <span class="precio-pist">40€</span>
                     </div>
                     <div class="imagen-pist">
                         <button type="button" class="pasar-derecha flecha">></button>
@@ -277,8 +291,8 @@
                 <article class="card tipo-techo">
                     <div class="info-pist">
                         <h3>Pista 10</h3>
-                        <span class="tipo-pist">Cristal Indoor Premium</span>
-                    <span class="precio-pist">10€</span>
+                        <span class="tipo-pist">Cristal Outdoor Premium</span>
+                    <span class="precio-pist">25€</span>
                     </div>
                     <div class="imagen-pist">
                         <button type="button" class="pasar-derecha flecha">></button>
@@ -304,14 +318,14 @@
                     <div class="info-pist">
                         <h3>Pista 11</h3>
                         <span class="tipo-pist">Cristal Indoor Premium</span>
-                    <span class="precio-pist">10€</span>
+                    <span class="precio-pist">20€</span>
                     </div>
                     <div class="imagen-pist">
                         <button type="button" class="pasar-derecha flecha">></button>
                         <button type="button" class="pasar-izquierda flecha"><</button>
 
-                        <img src="src/Imagen1.png" alt="pista interior" class="foto-principal">
-                        <img src="src/Imagen2.jpeg" alt="pista 3D" class="foto-secundaria">
+                        <img src="src/Imagen6.jpeg" alt="pista interior" class="foto-principal">
+                        <img src="src/Imagen3.jpeg" alt="pista 3D" class="foto-secundaria">
                     </div>
                     <div class="horarios">
                         <button class="hora-disponible">9:00</button>
@@ -330,15 +344,15 @@
                 <article class="card tipo-sin">
                     <div class="info-pist">
                         <h3>Pista 12</h3>
-                        <span class="tipo-pist">Cristal Indoor Premium</span>
-                    <span class="precio-pist">10€</span>
+                        <span class="tipo-pist">Cristal Sun Luxury</span>
+                    <span class="precio-pist">25€</span>
                     </div>
                     <div class="imagen-pist">
                         <button type="button" class="pasar-derecha flecha">></button>
                         <button type="button" class="pasar-izquierda flecha"><</button>
 
-                        <img src="src/pista-interior.png" alt="pista interior" class="foto-principal">
-                        <img src="src/padel-interior-3d.jpg" alt="pista 3D" class="foto-secundaria">
+                        <img src="src/Imagen1.png" alt="pista interior" class="foto-principal">
+                        <img src="src/Imagen4.jpeg" alt="pista 3D" class="foto-secundaria">
                     </div>
                     <div class="horarios">
                         <button class="hora-ocupada" disabled>9:00</button>
@@ -356,15 +370,15 @@
                 <article class="card tipo-sin">
                     <div class="info-pist">
                         <h3>Pista 13</h3>
-                        <span class="tipo-pist">Cristal Indoor Premium</span>
-                    <span class="precio-pist">10€</span>
+                        <span class="tipo-pist">Cristal Sun Premium</span>
+                    <span class="precio-pist">15€</span>
                     </div>
                     <div class="imagen-pist">
                         <button type="button" class="pasar-derecha flecha">></button>
                         <button type="button" class="pasar-izquierda flecha"><</button>
 
-                        <img src="src/pista-interior.png" alt="pista interior" class="foto-principal">
-                        <img src="src/padel-interior-3d.jpg" alt="pista 3D" class="foto-secundaria">
+                        <img src="src/Imagen5.jpeg" alt="pista interior" class="foto-principal">
+                        <img src="src/Imagen4.jpeg" alt="pista 3D" class="foto-secundaria">
                     </div>
                     <div class="horarios">
                         <button class="hora-ocupada" disabled>9:00</button>
@@ -382,15 +396,15 @@
                 <article class="card tipo-interior">
                     <div class="info-pist">
                         <h3>Pista 14</h3>
-                        <span class="tipo-pist">Cristal Indoor Premium</span>
-                    <span class="precio-pist">10€</span>
+                        <span class="tipo-pist">Cristal Indoor Luxury</span>
+                    <span class="precio-pist">35€</span>
                     </div>
                     <div class="imagen-pist">
                         <button type="button" class="pasar-derecha flecha">></button>
                         <button type="button" class="pasar-izquierda flecha"><</button>
 
-                        <img src="src/Imagen1.png" alt="pista interior" class="foto-principal">
-                        <img src="src/Imagen2.jpeg" alt="pista 3D" class="foto-secundaria">
+                        <img src="src/Imagen7.jpeg" alt="pista interior" class="foto-principal">
+                        <img src="src/Imagen3.jpeg" alt="pista 3D" class="foto-secundaria">
                     </div>
                     <div class="horarios">
                         <button class="hora-ocupada" disabled>9:00</button>
@@ -408,8 +422,8 @@
                 <article class="card tipo-techo">
                     <div class="info-pist">
                         <h3>Pista 15</h3>
-                        <span class="tipo-pist">Cristal Indoor Premium</span>
-                    <span class="precio-pist">10€</span>
+                        <span class="tipo-pist">Cristal Outdoor</span>
+                    <span class="precio-pist">15€</span>
                     </div>
                     <div class="imagen-pist">
                         <button type="button" class="pasar-derecha flecha">></button>
@@ -432,11 +446,10 @@
                 </article>
             </div>
             
-        </section>
-
+        </main>
 
     </body>
-    <footer>
-        <p>@ 2026 Premium Padel Club</p>
-    </footer>
+    <footer class="login-footer">
+            <p>@ 2026 Premium Padel Club</p>
+        </footer>
 </html>
