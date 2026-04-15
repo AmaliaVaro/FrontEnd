@@ -820,3 +820,7 @@ input[readonly]{
 #usuarios-users:checked ~ .admin-bloque .tabla-usuarios-admin .fila-usuario-admin:not(.rol-user){
     display: none;
 }
+
+.espacio-in{
+    height: 200px;
+}
