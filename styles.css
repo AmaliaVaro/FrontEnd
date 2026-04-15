@@ -871,3 +871,164 @@ input[readonly]{
     color: white;
     border-color: #b91c1c;
 }
+
+/* 1. SECCIÓN SUPERIOR (Foto + Textos) */
+
+.espacio-perfil {
+    display: grid;
+    /* Columna 1 para foto (20%), Columna 2 para textos (80%) */
+    grid-template-columns: 20% 80%; 
+    gap: 2rem;
+    border-bottom: 1px solid #eee; 
+    border-radius: 12px; /* Esquinas muy redondeadas */
+    padding: 3rem 2rem; /* Mucho padding vertical para dar altura */
+    margin: 2rem; /* Separación del resto de la página */
+    align-items: center; /* Centrado horizontal */
+    justify-content: left; /* Centrado vertical */
+    text-align: left;    
+}
+
+.foto-perfil {
+    grid-column: 1;
+    /* Ajustamos el tamaño para que no sea gigante */
+    width: 80%; 
+    height: auto;
+    object-fit: cover; /* Para que la foto no se deforme al ser circular */
+    border-radius: 50%;
+}
+
+/* Contenedor de los textos a la derecha de la foto */
+.Descripcion-pagina {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-left: 20px;
+
+}
+.titulo-perfil {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-size: 2rem;
+    padding: 10px;
+    width: 90%;
+    align-items: center;
+    height: 0 auto;
+}
+
+
+/* El H2 "Hola Maria" */
+.Descripcion-pagina h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* 2. SECCIÓN INFERIOR (Información Personal) */
+.informacion-personal {
+    
+
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+    padding: 2px 2px;
+    margin: 0 auto; 
+    border: 1px solid #166534;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.informacion-personal h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    align-items: center;
+}
+
+/* Estilo de la tabla para que ocupe su propio espacio */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Estilo para las etiquetas (DNI, Nombre, etc) */
+td:first-child {
+    font-weight: bold;
+    width: 30%;
+    color: #555;
+}
+
+/* Botón centrado */
+.guardar-cambios {
+    display: block;
+    margin: 3rem auto;
+    padding: 1rem 3rem;
+    background-color: #239c51;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* El contenedor principal de la notificación */
+.card-notificacion {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+.lista-reservas article:first-of-type {
+    margin-top: 3rem; /* Ajusta este valor (rem o px) según el espacio que quieras */
+}
+/* Columna de Información (Izquierda) */
+.notificacion-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.notificacion-info h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.fecha-notif {
+    display: block;
+    font-weight: bold;
+    color: #1a4d2e; /* Verde Premium */
+    margin-top: 0.5rem;
+}
+
+.detalle-notif {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Columna de Estados y Botones (Derecha) */
+.notificacion-estado {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Empuja todo a la derecha */
+    gap: 1rem;
+}
+
+/* Etiquetas de estado */
+.estado-notif {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.estado-notif.finalizado { background: #e0e0e0; color: #666; }
+.estado-notif.pendiente { background: #fff3cd; color: #856404; }
