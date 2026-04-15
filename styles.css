@@ -753,3 +753,47 @@ input[readonly]{
     color: #6b7280;
     cursor: not-allowed;
 }
+
+.rol-admin-badge{
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.rol-user-badge{
+    background-color: #e5e7eb;
+    color: #4b5563;
+}
+
+.rol-admin-badge-verde{
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+#usuarios-todos:checked ~ .admin-bloque .admin-menu-filtros label[for="usuarios-todos"],
+#usuarios-activos:checked ~ .admin-bloque .admin-menu-filtros label[for="usuarios-activos"],
+#usuarios-inactivos:checked ~ .admin-bloque .admin-menu-filtros label[for="usuarios-inactivos"],
+#usuarios-admins:checked ~ .admin-bloque .admin-menu-filtros label[for="usuarios-admins"],
+#usuarios-users:checked ~ .admin-bloque .admin-menu-filtros label[for="usuarios-users"]{
+    background-color: #166534;
+    color: white;
+    border-color: #166534;
+}
+
+#usuarios-activos:checked ~ .admin-bloque .tabla-usuarios-admin .fila-usuario-admin.inactivo{
+    display: none;
+}
+
+#usuarios-inactivos:checked ~ .admin-bloque .tabla-usuarios-admin .fila-usuario-admin.activo{
+    display: none;
+}
+
+#usuarios-admins:checked ~ .admin-bloque .tabla-usuarios-admin .fila-usuario-admin:not(.rol-admin){
+    display: none;
+}
+
+#usuarios-users:checked ~ .admin-bloque .tabla-usuarios-admin .fila-usuario-admin:not(.rol-user){
+    display: none;
+}
