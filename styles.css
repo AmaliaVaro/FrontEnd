@@ -600,3 +600,85 @@ td:first-child {
     font-weight: bold;
     cursor: pointer;
 }
+
+
+/* El contenedor principal de la notificación */
+.card-notificacion {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+.lista-reservas article:first-of-type {
+    margin-top: 3rem; /* Ajusta este valor (rem o px) según el espacio que quieras */
+}
+/* Columna de Información (Izquierda) */
+.notificacion-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.notificacion-info h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.fecha-notif {
+    display: block;
+    font-weight: bold;
+    color: #1a4d2e; /* Verde Premium */
+    margin-top: 0.5rem;
+}
+
+.detalle-notif {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Columna de Estados y Botones (Derecha) */
+.notificacion-estado {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Empuja todo a la derecha */
+    gap: 1rem;
+}
+
+/* Etiquetas de estado */
+.estado-notif {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.estado-notif.finalizado { background: #e0e0e0; color: #666; }
+.estado-notif.pendiente { background: #fff3cd; color: #856404; }
+
+/* Botones de acción */
+.btn-borrar, .btn-accion {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn-borrar {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.btn-accion.pagar {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-borrar:hover {
+    background-color: #cc0000;
+}
