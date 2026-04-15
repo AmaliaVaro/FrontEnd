@@ -8,15 +8,25 @@
         <link rel="icon" type="image/png" href="src/Captura de pantalla 2026-04-15 171537.png">
     </head>
     <body>
-        <header class="cabecera">
-            <p> Aqui va la barra de navegacion</p>
-            <h2>Premium Padel Club</h2>
-            <p>Reserva pista, consulta horarios y gestiona tu cuenta desde un mismo sitio.</p>
+        <header class="cabecera" style="display: flex; justify-content: space-between; align-items: center; padding: 18px 28px; background-color: #fff; border-bottom: 1px solid #eee; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+            <div style="display: flex; align-items: center; gap: 18px;">
+                <a href="index.html" style="text-decoration: none; color: #166534; font-size: 1.5rem; line-height: 1;">🎾</a>
+                <a href="index.html" style="text-decoration: none; color: #166534; font-size: 1.15rem; font-weight: 700;">Premium Padel</a>
+                <a href="index.html" style="text-decoration: none; color: #166534;">Inicio</a>
+                <a href="misReservas.html" style="text-decoration: none; color: #166534;">Mis reservas</a>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 18px;">
+                <a href="logIn.html" style="text-decoration: none; color: #166534;">Login</a>
+                <a href="SignIn.html" style="text-decoration: none; color: #166534;">SignIn</a>
+                <a href="notificaciones.html" style="text-decoration: none; font-size: 1.2rem;">🔔</a>
+                <a href="perfil.html" style="text-decoration: none; font-size: 1.2rem;">👤</a>
+            </div>
         </header>
 
         <main>
             <section>
-                <p class="login-footer">Todo lo necesario para organizar tu proximo partido de forma rapida y clara.</p>
+                <p class="login-footer">Accede rapido a tus reservas, tu perfil y la disponibilidad de pistas.</p>
 
                 <div class="menu-filtros">
                     <a href="reservas.html" class="btn-filtro">Reservar pista</a>
@@ -27,9 +37,9 @@
                 </div>
             </section>
 
-            <section class="mapa">
+            <section class="mapa" style="height: auto; margin-bottom: 40px;">
                 <h2>Encuentra nuestras pistas y elige la que mejor encaje con tu partido</h2>
-                <img src="src/paginaprincipal.jpg" alt="Paleta y pelotas de padel en la pista">
+                <img src="src/paginaprincipal.jpg" alt="Paleta y pelotas de padel en la pista" style="display: block; width: 90%; max-width: 1200px; height: auto; margin: 0 auto 30px; padding-bottom: 0; object-fit: cover;">
             </section>
 
             <div class="pistas">
