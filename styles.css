@@ -87,6 +87,31 @@
     column-gap: 20px;
 }
 
+@media only screen and (max-width: 899px){
+    .cabecera{
+        flex-direction: column;
+        grid-area: 20px;
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    .nav-grupo{
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .logo{
+        margin-right: 0;
+        margin-bottom: 5px;
+        font-size: 1.5rem;
+    }
+
+    .nav-link{
+        font-size: 1.1rem;
+        width: 100%;
+    }
+}
 @media only screen and (min-width: 900px){
     .pistas{
         grid-template-columns: repeat(2, 1fr);
@@ -426,14 +451,17 @@ body {
     padding: 10px 0;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     width: 100%;
+    box-sizing: border-box;
 
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
 .nav-grupo{
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 25px;
 }
@@ -443,6 +471,7 @@ body {
     font-weight: 800;
     color: #166534;
     margin-right: 20px;
+    white-space: nowrap;
 }
 
 .nav-link{
