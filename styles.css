@@ -823,6 +823,8 @@ input[readonly]{
 
 .espacio-in{
     height: 200px;
+}
+
 #reservas-todas:checked ~ .admin-bloque .admin-menu-filtros label[for="reservas-todas"],
 #reservas-activas:checked ~ .admin-bloque .admin-menu-filtros label[for="reservas-activas"],
 #reservas-canceladas:checked ~ .admin-bloque .admin-menu-filtros label[for="reservas-canceladas"],
