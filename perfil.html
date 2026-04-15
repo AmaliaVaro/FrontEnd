@@ -25,25 +25,22 @@
                 <a href="notificaciones.html" class="nav-link icono">&#128276</a>
             </div>
         </section>
-        <div class="espacio"></div>
-        <h1> Mi Perfil</h1>
-        <img src="src/icono_perfil_generico.jpg" alt="Foto de perfil" class="foto-perfil">
-        <!-- en css redimensionar la imagen y colocarla en la esquina superior derecha -->
-        <nav class="nav">
-            <a href="index.html">Inicio</a>
-            <a href="perfil.html">Perfil</a>
-            <a href="notificaciones.html">Notificaciones</a>
-            <!--Ir añadiendo las páginas-->
-            <!-- en css poner la barra de navegación entre pag web en la parte superior  -->
-        </nav>
     </header>
+    <div class="espacio"></div>
 
     <main class="contenedor-principal">
-        <section class="Descripcion-pagina">
-            <h2 class="titulo-perfil">Hola, Maria!!</h2>
-            <!-- en javascript (entrega 4) poner el nombre del usuario correcto Ahoar es genérico y elegimos Maria -->
-            <p>Bienvenido a tu perfil. Aquí puedes ver y editar tu información personal.</p>
-        </section>
+        <h1 class="intro"> Mi Perfil</h1>
+        <div class="espacio-perfil">
+            <img src="src/icono_perfil_generico.jpg" alt="Foto de perfil" class="foto-perfil">
+            <!-- en css redimensionar la imagen y colocarla en la esquina superior derecha -->
+            <!--Ir añadiendo las páginas-->
+            <!-- en css poner la barra de navegación entre pag web en la parte superior  -->
+            <section class="Descripcion-pagina">
+                <h2 class="saludo-perfil">Hola, Maria!!</h2>
+                <!-- en javascript (entrega 4) poner el nombre del usuario correcto Ahoar es genérico y elegimos Maria -->
+                <p>Bienvenido a tu perfil. Aquí puedes ver y editar tu información personal.</p>
+            </section>
+        </div>
 
         <section class="informacion-personal">
             <h3>Información Personal</h3>
@@ -63,8 +60,14 @@
                 </tr>
                 <tr>
                     <td>Sexo</td>
-                    <td><button>Mujer</button><button>Hombre</button><button>Otros</button></td>
-                    <!--mirar como hacer un selector-->
+                    <td>
+                        <select name="sexo" class="selector-genero">
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="mujer">Mujer</option>
+                            <option value="hombre">Hombre</option>
+                            <option value="otros">Otros</option>
+                        </select>
+                    </td> <!--mirar como hacer un selector-->
                 </tr>
                 <tr>
                     <td>Fecha de Nacimiento</td>
@@ -117,10 +120,9 @@
             <!-- en css colocar el botón debajo de la tabla y centrarlo -->
         </section>
     </main>
-    <footer>
-
-    </footer>
-
+    <footer class="login-footer">
+            <p>2026 Premium Padel Club</p>
+        </footer>
 </body>
 
 </html>
