@@ -1,3 +1,9 @@
+.contenedor-principal{
+    width: 90%;
+    max-width: 1240px;
+    margin: 0 auto 40px auto;
+}
+
 .mapa{
     width: 100%;
     height:600px;
@@ -87,31 +93,6 @@
     column-gap: 20px;
 }
 
-@media only screen and (max-width: 899px){
-    .cabecera{
-        flex-direction: column;
-        grid-area: 20px;
-        padding: 20px 10px;
-        text-align: center;
-    }
-
-    .nav-grupo{
-        flex-direction: column;
-        width: 100%;
-        gap: 15px;
-    }
-
-    .logo{
-        margin-right: 0;
-        margin-bottom: 5px;
-        font-size: 1.5rem;
-    }
-
-    .nav-link{
-        font-size: 1.1rem;
-        width: 100%;
-    }
-}
 @media only screen and (min-width: 900px){
     .pistas{
         grid-template-columns: repeat(2, 1fr);
@@ -314,6 +295,25 @@ body {
   text-decoration: underline;
 }
 
+.footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  color: #888;
+  font-size: 0.8rem;
+}
+
+.footer-link {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #166534;
+  text-decoration: underline;
+}
+
+
 /*SignIn*/
 .Signin-container {
   max-width: 420px;
@@ -418,7 +418,6 @@ body {
 }
 
 .intro{
-    width: 90%;
     display: flex;
     flex-direction: column;
     background-color: #14532d;
@@ -426,7 +425,6 @@ body {
     text-align: center;
     border-radius: 10px;
     padding: 2px 2px;
-    margin: 0 auto; 
     border: 1px solid #166534;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
@@ -451,21 +449,14 @@ body {
     padding: 10px 0;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     width: 100%;
-    box-sizing: border-box;
 
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
 .nav-grupo{
     display: flex;
-    flex-direction: row;
     align-items: center;
     gap: 25px;
 }
@@ -475,7 +466,6 @@ body {
     font-weight: 800;
     color: #166534;
     margin-right: 20px;
-    white-space: nowrap;
 }
 
 .nav-link{
@@ -496,192 +486,154 @@ body {
 .espacio{
     height: 20px;
 }
-/* 1. SECCIÓN SUPERIOR (Foto + Textos) */
 
-.espacio-perfil {
+/*Admin*/
+.admin-badge{
+    padding: 4px 10px;
+    border-radius: 14px;
+    background-color: #f0fdf4;
+    color: #166534;
+    border: 1px solid #d1fae5;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.admin-dashboard{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.admin-resumen{
     display: grid;
-    /* Columna 1 para foto (20%), Columna 2 para textos (80%) */
-    grid-template-columns: 20% 80%; 
-    gap: 2rem;
-    border-bottom: 1px solid #eee; 
-    border-radius: 12px; /* Esquinas muy redondeadas */
-    padding: 3rem 2rem; /* Mucho padding vertical para dar altura */
-    margin: 2rem; /* Separación del resto de la página */
-    align-items: center; /* Centrado horizontal */
-    justify-content: left; /* Centrado vertical */
-    text-align: left;    
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
 }
 
-.foto-perfil {
-    grid-column: 1;
-    /* Ajustamos el tamaño para que no sea gigante */
-    width: 80%; 
-    height: auto;
-    object-fit: cover; /* Para que la foto no se deforme al ser circular */
-    border-radius: 50%;
+@media only screen and (min-width: 800px){
+    .admin-resumen{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-/* Contenedor de los textos a la derecha de la foto */
-.Descripcion-pagina {
-    grid-column: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-left: 20px;
-
-}
-.titulo-perfil {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    font-size: 2rem;
-    padding: 10px;
-    width: 90%;
-    align-items: center;
-    height: 0 auto;
+@media only screen and (min-width: 1200px){
+    .admin-resumen{
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
-
-/* El H2 "Hola Maria" */
-.Descripcion-pagina h2 {
-    margin: 0;
-    font-size: 1.5rem;
-}
-
-/* 2. SECCIÓN INFERIOR (Información Personal) */
-.informacion-personal {
-    
-
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+.admin-card-resumen{
+    background-color: #fff;
+    border: 1px solid #ddd;
     border-radius: 10px;
-    padding: 2px 2px;
-    margin: 0 auto; 
-    border: 1px solid #166534;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-.informacion-personal h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    color: #333;
+.admin-card-resumen h3{
+    margin-top: 0;
+    color: #556;
+    font-size: 1rem;
+}
+
+.dato-admin{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #166534;
+    margin: 10px 0 0 0;
+}
+
+.admin-panel-central{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 1000px){
+    .admin-panel-central{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.admin-bloque{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.admin-bloque-cabecera{
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
-/* Estilo de la tabla para que ocupe su propio espacio */
-table {
+.admin-bloque-cabecera h3{
+    margin: 0;
+    color: #166534;
+}
+
+.admin-acciones{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.admin-actividad{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.admin-actividad p{
+    margin: 0;
+    color: #556;
+}
+
+.tabla-admin-wrapper{
+    overflow-x: auto;
+}
+
+.tabla-admin{
     width: 100%;
     border-collapse: collapse;
 }
 
-td {
-    padding: 1rem;
-    border-bottom: 1px solid #f0f0f0;
+.tabla-admin th,
+.tabla-admin td{
+    text-align: left;
+    padding: 14px 12px;
+    border-bottom: 1px solid #eee;
 }
 
-/* Estilo para las etiquetas (DNI, Nombre, etc) */
-td:first-child {
-    font-weight: bold;
-    width: 30%;
-    color: #555;
+.tabla-admin th{
+    color: #166534;
+    font-size: 0.95rem;
 }
 
-/* Botón centrado */
-.guardar-cambios {
-    display: block;
-    margin: 3rem auto;
-    padding: 1rem 3rem;
-    background-color: #239c51;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
+.estado-admin{
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 14px;
+    font-size: 0.78rem;
+    font-weight: 600;
 }
 
-
-/* El contenedor principal de la notificación */
-.card-notificacion {
-    background: #fff;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    margin-bottom: 2rem;
-}
-.lista-reservas article:first-of-type {
-    margin-top: 3rem; /* Ajusta este valor (rem o px) según el espacio que quieras */
-}
-/* Columna de Información (Izquierda) */
-.notificacion-info {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
+.estado-activa{
+    background-color: #f0fdf4;
+    color: #166534;
 }
 
-.notificacion-info h3 {
-    margin: 0;
-    color: #333;
-    font-size: 1.2rem;
+.estado-cancelada{
+    background-color: #fee2e2;
+    color: #b91c1c;
 }
 
-.fecha-notif {
-    display: block;
-    font-weight: bold;
-    color: #1a4d2e; /* Verde Premium */
-    margin-top: 0.5rem;
-}
-
-.detalle-notif {
-    display: block;
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-}
-
-/* Columna de Estados y Botones (Derecha) */
-.notificacion-estado {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; /* Empuja todo a la derecha */
-    gap: 1rem;
-}
-
-/* Etiquetas de estado */
-.estado-notif {
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: bold;
-}
-
-.estado-notif.finalizado { background: #e0e0e0; color: #666; }
-.estado-notif.pendiente { background: #fff3cd; color: #856404; }
-
-/* Botones de acción */
-.btn-borrar, .btn-accion {
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s ease;
-}
-
-.btn-borrar {
-    background-color: #ff4d4d;
-    color: white;
-}
-
-.btn-accion.pagar {
-    background-color: #28a745;
-    color: white;
-}
-
-.btn-borrar:hover {
-    background-color: #cc0000;
-}
 .admin-toolbar{
     flex-wrap: wrap;
 }
