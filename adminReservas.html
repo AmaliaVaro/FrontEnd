@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Admin Reservas</title>
+        <title>Gestion Reservas</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="icon" type="image/png" href="src/Captura de pantalla 2026-04-15 171537.png">
     </head>
@@ -24,3 +24,129 @@
             </div>
         </header>
         <div class="espacio"></div>
+        <main class="contenedor-principal admin-dashboard">
+            <section class="intro admin-intro">
+                <h2>Gestión de reservas</h2>
+            </section>
+
+            <input type="radio" name="filtro-reservas-admin" id="reservas-todas" checked class="filtro-oculto">
+            <input type="radio" name="filtro-reservas-admin" id="reservas-activas" class="filtro-oculto">
+            <input type="radio" name="filtro-reservas-admin" id="reservas-canceladas" class="filtro-oculto">
+            <input type="radio" name="filtro-reservas-admin" id="reservas-hoy" class="filtro-oculto">
+
+            <section class="admin-bloque">
+                <div class="admin-bloque-cabecera admin-toolbar">
+                    <div class="menu-filtros admin-menu-filtros">
+                        <label for="reservas-todas" class="btn-filtro">Todas</label>
+                        <label for="reservas-activas" class="btn-filtro">Activas</label>
+                        <label for="reservas-canceladas" class="btn-filtro">Canceladas</label>
+                        <label for="reservas-hoy" class="btn-filtro">Hoy</label>
+                    </div>
+                </div>
+
+                <div class="tabla-admin-wrapper">
+                    <table class="tabla-admin tabla-reservas-admin">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Usuario</th>
+                                <th>Pista</th>
+                                <th>Fecha</th>
+                                <th>Hora inicio</th>
+                                <th>Duración</th>
+                                <th>Estado</th>
+                                <th>Fecha creación</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="fila-reserva-admin activa hoy">
+                                <td>245</td>
+                                <td>María García</td>
+                                <td>Pista 02</td>
+                                <td>15/04/2026</td>
+                                <td>18:00</td>
+                                <td>90 min</td>
+                                <td><span class="estado-admin estado-activa">ACTIVA</span></td>
+                                <td>12/04/2026</td>
+                                <td class="acciones-tabla">
+                                    <a href="adminReservaDetalle.html" class="accion-tabla editar">Gestionar</a>
+                                </td>
+                            </tr>
+
+                            <tr class="fila-reserva-admin cancelada hoy">
+                                <td>244</td>
+                                <td>Juan Pérez</td>
+                                <td>Pista 05</td>
+                                <td>15/04/2026</td>
+                                <td>19:30</td>
+                                <td>90 min</td>
+                                <td><span class="estado-admin estado-cancelada">CANCELADA</span></td>
+                                <td>11/04/2026</td>
+                                <td class="acciones-tabla">
+                                    <a href="adminReservaDetalle.html" class="accion-tabla editar">Gestionar</a>
+                                </td>
+                            </tr>
+
+                            <tr class="fila-reserva-admin activa">
+                                <td>243</td>
+                                <td>Lucía Pérez</td>
+                                <td>Pista 01</td>
+                                <td>16/04/2026</td>
+                                <td>21:00</td>
+                                <td>60 min</td>
+                                <td><span class="estado-admin estado-activa">ACTIVA</span></td>
+                                <td>13/04/2026</td>
+                                <td class="acciones-tabla">
+                                    <a href="adminReservaDetalle.html" class="accion-tabla editar">Gestionar</a>
+                                </td>
+                            </tr>
+
+                            <tr class="fila-reserva-admin activa">
+                                <td>242</td>
+                                <td>Ana López</td>
+                                <td>Pista 08</td>
+                                <td>17/04/2026</td>
+                                <td>10:30</td>
+                                <td>90 min</td>
+                                <td><span class="estado-admin estado-activa">ACTIVA</span></td>
+                                <td>14/04/2026</td>
+                                <td class="acciones-tabla">
+                                    <a href="adminReservaDetalle.html" class="accion-tabla editar">Gestionar</a>
+                                </td>
+                            </tr>
+
+                            <tr class="fila-reserva-admin cancelada">
+                                <td>241</td>
+                                <td>Paula Sánchez</td>
+                                <td>Pista 03</td>
+                                <td>18/04/2026</td>
+                                <td>12:00</td>
+                                <td>60 min</td>
+                                <td><span class="estado-admin estado-cancelada">CANCELADA</span></td>
+                                <td>14/04/2026</td>
+                                <td class="acciones-tabla">
+                                    <a href="adminReservaDetalle.html" class="accion-tabla editar">Gestionar</a>
+                                </td>
+                            </tr>
+
+                            <tr class="fila-reserva-admin activa">
+                                <td>240</td>
+                                <td>Carlos Martín</td>
+                                <td>Pista 07</td>
+                                <td>19/04/2026</td>
+                                <td>09:00</td>
+                                <td>90 min</td>
+                                <td><span class="estado-admin estado-activa">ACTIVA</span></td>
+                                <td>14/04/2026</td>
+                                <td class="acciones-tabla">
+                                    <a href="adminReservaDetalle.html" class="accion-tabla editar">Gestionar</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

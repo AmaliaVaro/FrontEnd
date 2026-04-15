@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gestion Reserva</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/png" href="src/Captura de pantalla 2026-04-15 171537.png">
+    </head>
+    <body>
+        <header class="cabecera">
+            <div class="nav-grupo">
+                <span class="logo">&#127934 Premium Padel</span>
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="admin.html" class="nav-link">Panel Admin</a>
+                <a href="adminUsuarios.html" class="nav-link">Usuarios</a>
+                <a href="adminPistas.html" class="nav-link">Pistas</a>
+                <a href="adminReservas.html" class="nav-link">Reservas</a>
+            </div>
+            <div class="nav-grupo">
+                <span class="admin-badge">ÁREA ADMIN</span>
+                <a href="notificaciones.html" class="nav-link icono">&#128276</a>
+                <a href="perfil.html" class="nav-link icono">&#128100</a>
+            </div>
+        </header>
+        <div class="espacio"></div>
+        <main class="contenedor-principal admin-dashboard">
+            <section class="intro admin-intro">
+                <h2>Gestión de reserva</h2>
+            </section>
+            <section class="admin-formulario-bloque">
+                <div class="admin-formulario-header">
+                    <h3>Datos de la reserva</h3>
+                    <a href="adminReservas.html" class="btn-filtro">Volver a reservas</a>
+                </div>
+
+                <form class="admin-formulario-pista admin-formulario-reserva">
+                    <div class="form-group">
+                        <label for="idReserva">ID de reserva</label>
+                        <input type="text" id="idReserva" name="idReserva" value="245" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="usuario">Usuario</label>
+                        <input type="text" id="usuario" name="usuario" value="María García" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pista">Pista</label>
+                        <select id="pista" name="pista" class="select-admin">
+                            <option>Pista 01</option>
+                            <option selected>Pista 02</option>
+                            <option>Pista 03</option>
+                            <option>Pista 04</option>
+                            <option>Pista 05</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fechaReserva">Fecha de reserva</label>
+                        <input type="date" id="fechaReserva" name="fechaReserva" value="2026-04-15" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="horaInicio">Hora de inicio</label>
+                        <input type="time" id="horaInicio" name="horaInicio" value="18:00" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="duracionMinutos">Duración (min)</label>
+                        <select id="duracionMinutos" name="duracionMinutos" class="select-admin">
+                            <option>60</option>
+                            <option selected>90</option>
+                            <option>120</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="horaFin">Hora de fin</label>
+                        <input type="time" id="horaFin" name="horaFin" value="19:30" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="estado">Estado</label>
+                        <select id="estado" name="estado" class="select-admin">
+                            <option selected>ACTIVA</option>
+                            <option>CANCELADA</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fechaCreacion">Fecha de creación</label>
+                        <input type="date" id="fechaCreacion" name="fechaCreacion" value="2026-04-12" readonly>
+                    </div>
+
+                    <div class="admin-formulario-acciones admin-formulario-acciones-reserva">
+                        <a href="adminReservas.html" class="btn-filtro btn-admin-peligro">Anular reserva</a>
+                        <a href="adminReservas.html" class="btn-filtro">Cancelar</a>
+                        <button type="submit" class="btn-login btn-guardar-pista">Guardar cambios</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+    </body>
+</html>
