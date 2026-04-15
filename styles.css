@@ -610,3 +610,66 @@ body {
     background-color: #fee2e2;
     color: #b91c1c;
 }
+
+.admin-toolbar{
+    flex-wrap: wrap;
+}
+
+.admin-menu-filtros{
+    justify-content: flex-start;
+    margin: 0;
+}
+
+.btn-admin-principal{
+    background-color: #166534;
+    color: white;
+    border-color: #166534;
+}
+
+.btn-admin-principal:hover{
+    background-color: white;
+    color: #166534;
+}
+
+.acciones-tabla{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    white-space: nowrap;
+}
+
+.accion-tabla{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-block;
+}
+
+.accion-tabla:hover{
+    text-decoration: underline;
+}
+
+.accion-tabla.editar{
+    color: #166534;
+}
+
+.estado-inactiva{
+    background-color: #f3f4f6;
+    color: #6b7280;
+}
+
+#admin-todas:checked ~ .admin-bloque .admin-menu-filtros label[for="admin-todas"],
+#admin-activas:checked ~ .admin-bloque .admin-menu-filtros label[for="admin-activas"],
+#admin-inactivas:checked ~ .admin-bloque .admin-menu-filtros label[for="admin-inactivas"]{
+    background-color: #166534;
+    color: white;
+    border-color: #166534;
+}
+
+#admin-activas:checked ~ .admin-bloque .tabla-pistas-admin .fila-pista-admin.inactiva{
+    display: none;
+}
+
+#admin-inactivas:checked ~ .admin-bloque .tabla-pistas-admin .fila-pista-admin.activa{
+    display: none;
+}
